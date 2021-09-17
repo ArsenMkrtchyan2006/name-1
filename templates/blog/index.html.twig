@@ -1,0 +1,180 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}First blog{% endblock %}
+
+{% block body %}
+
+
+<html>
+<head>
+<style>
+.bordere {
+  border-bottom: 1px solid #7e7e7e;
+ display: table;
+}
+  li, #myUL {
+    list-style-type: none;
+  }
+
+  #myUL {
+    margin: 0;
+    padding: 0;
+
+  }
+.forp {
+  font-size: 30px;
+}
+
+  .caret {
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none;
+    border-bottom: 1px solid #7e7e7e;
+
+  }
+
+  .caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 5px;
+
+  }
+
+  .caret-down::before {
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Safari */'
+  transform: rotate(90deg);
+    border-bottom: 1px solid #7e7e7e;
+  }
+
+  .nested {
+    display: none;
+
+  }
+
+  .active {
+    display: block;
+  }
+body {
+  font-size: 28px;
+}
+
+.uli {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+.fop {
+  float: right;
+
+}
+
+
+.lia {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.activeea {
+  background-color: #4CAF50;
+}
+.forbody {
+  background: #d7d7d7;
+}
+</style>
+</head>
+<body class="forbody">
+
+
+<ul class="uli">
+  <li class="lia"><a class="activeea" href="{{ path('blog_index') }}">Home</a></li>
+  <li class="lia"><a href="{{ path('Pagetwo_index') }}">something</a></li>
+  <li class="lia"><a href="{{ path('Page3_index') }}">Contact</a></li>
+</ul>
+
+<h1 class="h1i" style="text-align: center;">Documentation</h1>
+<ul  id="myUL">
+  <li ><h3 class="caret" >News 1</h3>
+    <ul  class="nested">
+      <div>
+
+
+        <p style="border-bottom: 1px solid #7e7e7e;" >sdds</p>
+
+      </div>
+
+
+    </ul>
+  </li>
+</ul>
+ <br>
+<br>
+<ul  id="myUL">
+  <li ><h3 class="caret" >News 2 </h3>
+    <ul  class="nested">
+      <div>
+
+
+        <p class="forp" style="border-bottom: 1px solid #7e7e7e;" >sdds</p>
+
+      </div>
+
+
+    </ul>
+  </li>
+</ul>
+<br>
+<br>
+<ul  id="myUL">
+  <li ><h3 class="caret" >News 3 </h3>
+    <ul  class="nested">
+      <div>
+
+
+        <p class="forp" style="border-bottom: 1px solid #7e7e7e;" >sdds</p>
+
+      </div>
+
+
+    </ul>
+  </li>
+</ul>
+
+<script>
+  var toggler = document.getElementsByClassName("caret");
+  var i;
+
+  for (i = 0; i < toggler.length; i++) {
+    toggler[i].addEventListener("click", function() {
+      this.parentElement.querySelector(".nested").classList.toggle("active");
+      this.classList.toggle("caret-down");
+    });
+  }
+</script>
+
+
+</body>
+
+
+
+
+{% endblock %}

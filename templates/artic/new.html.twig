@@ -1,0 +1,10 @@
+
+{% block title %}New Artical{% endblock %}
+
+{% block body %}
+    <h1>Create new Artical</h1>
+
+    {{ include('artic/_form.html.twig') }}
+
+    <a href="{{ path('ArticIndex') }}">back to list</a>
+{% endblock %}

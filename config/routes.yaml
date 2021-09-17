@@ -1,0 +1,12 @@
+
+
+
+ArticIndex:
+  path: /artic/index.html.twig
+  controller : App\Controller\ArticController::index
+
+ArticNew:
+  path: /artic/new.html.twig
+  controller: App\Controller\ArticController::new
+
+

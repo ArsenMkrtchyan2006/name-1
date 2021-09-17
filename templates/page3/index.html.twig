@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}hello something 1{% endblock %}
+
+{% block body %}
+    <style>
+
+
+        .lia {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        .activeea {
+            background-color: #4CAF50;
+        }
+        .uli {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: -webkit-sticky; /* Safari */
+            position: sticky;
+            top: 0;
+        }
+        .forp {
+            font-size: 30px;
+        }
+
+
+        body {
+            font-size: 28px;
+        }
+        .forbody {
+            background: #d7d7d7;
+        }
+    </style>
+    <body class="forbody" >
+    <ul class="uli">
+        <li class="lia"><a  href="{{ path('blog_index') }}">Home</a></li>
+        <li class="lia"><a href="{{ path('Pagetwo_index') }}">something</a></li>
+        <li class="lia"><a  class="activeea" href="{{ path('Page3_index') }}">Contact</a></li>
+    </ul>
+    <div>
+        <br>
+        <center><h1>Hello, this is something two ✅</h1></center>
+
+        <CENTER><p  class="forp">TEXT </p></CENTER>
+    </div>
+    </body>
+{% endblock %}
