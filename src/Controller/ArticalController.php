@@ -30,7 +30,7 @@ class ArticalController extends AbstractController
      */
     public function new(Request $request): Response
     {
-        $artical = new Artcal();
+        $artical = new Artical();
         $date = new \DateTime('now');
         $form = $this->createForm(ArticalType::class, $artical);
         $form->handleRequest($request);

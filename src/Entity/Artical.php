@@ -42,15 +42,15 @@ class Artical
         return $this->id;
     }
 
-    public function getName(): ?string
+    public function getPrice(): ?string
     {
         return $this->name;
     }
 
-    public function setName(string $name): self
+    public function setPrice(string $price): self
     {
 
-        $this->name = $name;
+        $this->price = $price;
 
         return $this;
     }
@@ -79,15 +79,15 @@ class Artical
         return $this;
     }
 
-    public function getIsEnabled(): ?bool
-    {
-        return $this->isEnabled;
-    }
-
-    public function setIsEnabled(bool $isEnabled): self
-    {
-        $this->isEnabled = $isEnabled;
-
-        return $this;
-    }
+//    public function getIsEnabled(): ?bool
+//    {
+//        return $this->isEnabled;
+//    }
+//
+//    public function setIsEnabled(bool $isEnabled): self
+//    {
+//        $this->isEnabled = $isEnabled;
+//
+//        return $this;
+//    }
 }

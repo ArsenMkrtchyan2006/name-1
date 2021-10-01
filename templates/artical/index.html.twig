@@ -12,7 +12,7 @@
                 <th>Name</th>
                 <th>Description</th>
                 <th>CreatedAt</th>
-                <th>IsEnabled</th>
+{#                <th>IsEnabled</th>#}
                 <th>actions</th>
             </tr>
         </thead>
@@ -23,7 +23,7 @@
                 <td>{{ artical.name }}</td>
                 <td>{{ artical.description }}</td>
                 <td>{{ artical.createdAt ? artical.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ artical.isEnabled ? 'Yes' : 'No' }}</td>
+{#                <td>{{ artical.isEnabled ? 'Yes' : 'No' }}</td>#}
                 <td>
                     <a href="{{ path('artical_show', {'id': artical.id}) }}">show</a>
                     <a href="{{ path('artical_edit', {'id': artical.id}) }}">edit</a>
