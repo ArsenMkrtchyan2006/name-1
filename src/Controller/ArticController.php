@@ -110,13 +110,13 @@ class ArticController extends AbstractController
 //        $formattedtimee =  $time->format('Y-m-d H:i:s');
 
 
-
-        $date1 = new \DateTime('2000-01-01 12:45:30');
-        $timezone1 =  new \DateTimeZone('Europe/Istanbul');
-        $date1->modify('+1 day');
-        $date1->setTimezone($timezone1);
-        echo $date1->format('y-m-d H:i:s   __e')."<br>"."<br>";
-
+//
+//        $date1 = new \DateTime('2000-01-01 12:45:30');
+//        $timezone1 =  new \DateTimeZone('Europe/Istanbul');
+//        $date1->modify('+1 day');
+//        $date1->setTimezone($timezone1);
+//        echo $date1->format('y-m-d H:i:s   __e')."<br>"."<br>";
+//
 
 
 
@@ -403,24 +403,7 @@ echo $newtime1 .'<br>'.'<br>';
 //
 ////
 //
-//        $three=[
-//           "first"=>"go home"
-//            , "second"=>"go school"
-//        ];
-//
-//
-//
-//        foreach ($three as $key => $value) {
-//            switch ($key){
-//                case "second":
-//                    $three[$key] = 'go out from school ';
-//                    break;
-//                default:
-//
-//                    break;
-//            }
-//        }
-//        echo ($three["second"]);
+
 //        $four=[
 //            "time"=>"12:30",
 //            "mounth"=>"2"
@@ -550,7 +533,34 @@ echo $newtime1 .'<br>'.'<br>';
         ]);
     }
 
+    public function cases(): Response
+    {
+        $three=[
+            "first"=>"go home"
+            , "second"=>"go school"
+        ];
 
+
+
+        foreach ($three as $key => $value) {
+            switch ($key){
+                case "second":
+                    $three[$key] = 'go out from school ';
+                    break;
+                default:
+
+                    break;
+            }
+        }
+        echo ($three["second"]);
+
+
+
+        return $this->render('artic/cases.html.twig', [
+
+
+        ]);
+    }
 
 
 
